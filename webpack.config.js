@@ -6,7 +6,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
   mode: 'development',
   entry: {
-    index: './src/index.js', // Entry point for the application
+    index: './src/script.js', // Entry point for the application
   },
   // devtool: 'inline-source-map',
   devServer: {
@@ -21,9 +21,6 @@ module.exports = {
     filename: '[name].bundle.js', // Use the entry point name for the bundle filename
     path: path.resolve(__dirname, 'dist'), // Output to the 'dist' directory
     clean: true, // Clean the output directory before building
-  },
-  optimization: {
-    runtimeChunk: 'single', // Extract runtime code into a separate chunk
   },
   module: {
     rules: [
